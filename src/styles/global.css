@@ -353,7 +353,6 @@ a {
 }
 
 /* SERVICE ICON */
-
 .service-icon {
   width: 54px;
   height: 54px;
@@ -364,13 +363,10 @@ a {
 
   margin-bottom: 24px;
 
-  background: rgba(104, 173, 61, 0.13);
-  color: var(--green-dark);
-
   border-radius: 14px;
 
-  font-size: 23px;
-  font-weight: 800;
+  background: rgba(104, 173, 61, 0.13);
+  color: var(--green-dark);
 
   transition:
     background 0.25s ease,
@@ -381,10 +377,8 @@ a {
 .service-card:hover .service-icon {
   background: var(--white);
   color: var(--green-dark);
-
   transform: scale(1.06);
 }
-
 /* SERVICE TEXT */
 
 .service-card h3 {
@@ -498,5 +492,122 @@ a {
   .service-card {
     min-height: auto;
     padding: 28px 24px;
+  }
+}
+
+/* =========================
+   ABOUT
+========================= */
+
+.about {
+  padding: 100px 0;
+  background: var(--white);
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  align-items: center;
+  gap: 80px;
+}
+
+.about-copy h2 {
+  margin: 0;
+
+  color: var(--dark);
+
+  font-size: clamp(36px, 4vw, 52px);
+  line-height: 1.1;
+}
+
+.about-copy h2 span {
+  color: var(--green);
+}
+
+.about-copy p {
+  margin: 20px 0 0;
+
+  color: var(--muted);
+
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.about-copy .button {
+  margin-top: 28px;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 20px;
+}
+
+.benefit-card {
+  padding: 28px;
+
+  background: #f8faf7;
+
+  border: 1px solid #e2e9df;
+  border-radius: 16px;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.benefit-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 35px rgba(49, 90, 41, 0.1);
+}
+
+.benefit-icon {
+  width: 50px;
+  height: 50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 20px;
+
+  background: rgba(104, 173, 61, 0.13);
+  color: var(--green-dark);
+
+  border-radius: 14px;
+}
+
+.benefit-card h3 {
+  margin: 0;
+
+  color: var(--dark);
+
+  font-size: 19px;
+}
+
+.benefit-card p {
+  margin: 12px 0 0;
+
+  color: var(--muted);
+
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+@media (max-width: 900px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+}
+
+@media (max-width: 600px) {
+  .about {
+    padding: 75px 0;
+  }
+
+  .benefits-grid {
+    grid-template-columns: 1fr;
   }
 }
